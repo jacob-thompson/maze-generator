@@ -1,0 +1,42 @@
+[project]
+name = "maze-generator"
+version = "{{VERSION_PLACEHOLDER}}"
+description = "Generates a maze using Wilson's algorithm"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["maze", "puzzle", "tool", "executable", "application"]
+authors = [
+    {name = "Jacob A. Thompson", email = "jacobalthompson@gmail.com"}
+]
+maintainers = [
+    {name = "Jacob A. Thompson", email = "jacobalthompson@gmail.com"}
+]
+classifiers = [
+	"Development Status :: 1 - Planning",
+    "Topic :: Games/Entertainment",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jacob-thompson/maze-generator"
+"Bug Reports" = "https://github.com/jacob-thompson/maze-generator/issues"
+
+[project.scripts]
+pong = "maze_generator.main:main"
+
+[tool.hatch.build]
+exclude = [
+	"src/maze_generator/data/wilson.gif"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
